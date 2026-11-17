@@ -1,16 +1,10 @@
-
-def calculate_total(price, quantity):
+def calculate_total(price, quantity, tax_percentage):
     """
-    Calculate the total price before tax.
-
-    Args:
-        price: Price per item.
-        quantity: Number of items.
-
-    Returns:
-        Total price before tax.
+    Calculate total price including tax.
     """
-    return price * quantity
+    subtotal = price * quantity
+    tax = subtotal * tax_percentage / 100
+    return subtotal + tax
 
 
 def calculate_bulk_total(price, quantity):
