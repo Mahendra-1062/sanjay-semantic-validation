@@ -1,5 +1,7 @@
-def calculate_total(price, quantity):
-    return price * quantity
+def calculate_total(price, quantity, tax_percentage):
+    subtotal = price * quantity
+    tax = subtotal * tax_percentage / 100
+    return subtotal + tax
 
 
 def calculate_bulk_total(items):
